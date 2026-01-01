@@ -1,11 +1,15 @@
-import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import GlobePage from './pages/GlobePage';
 
-const App: React.FC = () => {
+function App() {
   return (
-    <div style={{ textAlign: 'center', marginTop: '100px' }}>
-      <h1>Hello Vite + React + TypeScript!</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<div>Home Page</div>} />
+        <Route path="/globe" element={<GlobePage />} />
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;
